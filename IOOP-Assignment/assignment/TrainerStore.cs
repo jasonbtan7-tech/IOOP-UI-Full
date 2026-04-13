@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 
 namespace assignment
 {
@@ -14,15 +13,23 @@ namespace assignment
 
         public static bool RemoveById(string id)
         {
-            var t = trainers.FirstOrDefault(x => x.Id == id);
+            Trainer t = null;
+            for (int i = 0; i < trainers.Count; i++)
+            {
+                if (trainers[i].Id == id)
+                {
+                    t = trainers[i];
+                    break;
+                }
+            }
             if (t == null) return false;
             trainers.Remove(t);
             return true;
         }
 
-        public static IReadOnlyList<Trainer> GetAll()
+        public static List<Trainer> GetAll()
         {
-            return trainers.AsReadOnly();
+            return new List<Trainer>(trainers);
         }
     }
 }

@@ -1,6 +1,5 @@
 using System;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace assignment
@@ -61,11 +60,14 @@ namespace assignment
         {
             listRequests.Items.Clear();
             var all = RequestStore.GetAll();
-            var pending = all.Where(r => string.Equals(r.Status, "Pending", StringComparison.OrdinalIgnoreCase));
-            foreach (var r in pending)
+            for (int i = 0; i < all.Count; i++)
             {
-                var item = new ListViewItem(new string[] { r.Grade, r.Lecturer, r.Status, r.RequestedAt.ToString("g") }) { Tag = r };
-                listRequests.Items.Add(item);
+                var r = all[i];
+                if (string.Equals(r.Status, "Pending", StringComparison.OrdinalIgnoreCase))
+                {
+                    var item = new ListViewItem(new string[] { r.Grade, r.Lecturer, r.Status, r.RequestedAt.ToString("g") }) { Tag = r };
+                    listRequests.Items.Add(item);
+                }
             }
         }
     }

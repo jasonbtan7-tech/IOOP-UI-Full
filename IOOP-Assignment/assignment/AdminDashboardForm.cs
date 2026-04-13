@@ -1,6 +1,5 @@
 using System;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace assignment
@@ -106,7 +105,16 @@ namespace assignment
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-            var login = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+            Form1 login = null;
+            for (int i = 0; i < Application.OpenForms.Count; i++)
+            {
+                var f = Application.OpenForms[i];
+                if (f is Form1)
+                {
+                    login = (Form1)f;
+                    break;
+                }
+            }
 
             if (login != null)
             {

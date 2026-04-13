@@ -36,3 +36,9 @@ C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.cspr
 C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.csproj.CoreCompileInputs.cache
 C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.exe
 C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.pdb
+C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.LecturerApproveRequestsForm.resources
+C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.LecturerUpdateProfileForm.resources
+C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.LecturerViewStudentsForm.resources
+C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.LecturerDashboard.resources
+C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.RegisterStudentForm.resources
+C:\Users\esont\source\repos\IOOP-Assignment\assignment\obj\Debug\assignment.ViewIncomeReportForm.resources

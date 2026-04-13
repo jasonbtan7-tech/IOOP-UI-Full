@@ -12,9 +12,9 @@ namespace assignment
             items.Add(f);
         }
 
-        public static IReadOnlyList<Feedback> GetAll()
+        public static List<Feedback> GetAll()
         {
-            return items.AsReadOnly();
+            return new List<Feedback>(items);
         }
 
         public static void Clear()

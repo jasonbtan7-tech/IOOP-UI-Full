@@ -15,9 +15,9 @@ namespace assignment
             RequestsChanged?.Invoke();
         }
 
-        public static IReadOnlyList<CoachingRequest> GetAll()
+        public static List<CoachingRequest> GetAll()
         {
-            return requests.AsReadOnly();
+            return new List<CoachingRequest>(requests);
         }
 
         public static void Clear()

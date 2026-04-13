@@ -1,7 +1,6 @@
 using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace assignment
@@ -67,8 +66,24 @@ namespace assignment
             dt.Columns.Add("Text", typeof(string));
             dt.Columns.Add("SubmittedAt", typeof(DateTime));
 
-            foreach (var f in FeedbackStore.GetAll().OrderByDescending(x => x.SubmittedAt))
+            var all = FeedbackStore.GetAll();
+            // sort by SubmittedAt descending without LINQ
+            for (int i = 0; i < all.Count; i++)
             {
+                for (int j = i + 1; j < all.Count; j++)
+                {
+                    if (all[j].SubmittedAt > all[i].SubmittedAt)
+                    {
+                        var tmp = all[i];
+                        all[i] = all[j];
+                        all[j] = tmp;
+                    }
+                }
+            }
+
+            for (int i = 0; i < all.Count; i++)
+            {
+                var f = all[i];
                 dt.Rows.Add(f.Id.ToString(), f.Text, f.SubmittedAt);
             }
 

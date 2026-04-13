@@ -201,6 +201,7 @@
     <EmbeddedResource Include="ViewScheduleForm.resx">
       <DependentUpon>ViewScheduleForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".github\copilot-instructions.md" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
